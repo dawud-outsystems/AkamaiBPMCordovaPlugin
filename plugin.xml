@@ -4,10 +4,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>AkamaiBmpCordovaPlugin</name>
     <js-module name="AkamaiBmpCordovaPlugin" src="www/AkamaiBmpCordovaPlugin.js">
-        <clobbers target="AkamaiBMP" />
+        <clobbers target="window.AkamaiBMP" />
     </js-module>
 
-    <js-module src="other/IdentifyUserNative.js" name="identifyUserNative">
+    <js-module src="www/Pepito.js" name="pepito">
       <clobbers target="window.plugins.pepito" />
     </js-module>
 
