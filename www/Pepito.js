@@ -2,11 +2,8 @@
 function Pepito() {}
 
 // The function that passes work along to native shells
-Pepito.prototype.pepito = function(userId, successCallback, errorCallback) {
-  var options = {};
-  options.userId = userId;
-  //cordova.exec(successCallback, errorCallback, 'DynatraceCordovaPlugin', 'identifyUser', [options]);
-  alert("something");
+Pepito.prototype.pepito = function() {
+ alert("something");
 }
 
 // Installation constructor that binds Pepito to window
