@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="akamaibmp-cordova-plugin" version="3.2.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>AkamaiBmpCordovaPlugin</name>
+    <js-module name="AkamaiBmpCordovaPlugin" src="www/AkamaiBmpCordovaPlugin.js">
+        <clobbers target="AkamaiBMP" />
+    </js-module>
+    <engines>
+        <engine name="cordova" version=">=6.5.0" />
+    </engines>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="AkamaiBmpCordovaPlugin">
+                <param name="android-package" value="com.akamai.botman.AkamaiBmpCordovaPlugin" />
+                <!-- <param name="onload" value="true" /> -->
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+		<framework src="com.android.support:appcompat-v7:+"/>
+		<framework src="src/android/akamai_bmp_build.gradle" custom="true" type="gradleReference" />
+		<resource-file src="src/android/libs/AkamaiBMP-3.2.0.aar" target="libs/AkamaiBMP-3.2.0.aar" />
+        <source-file src="src/android/AkamaiBmpCordovaPlugin.java" target-dir="src/com/akamai/botman" />
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="AkamaiBmpCordovaPlugin">
+                <param name="ios-package" value="AkamaiBmpCordovaPlugin" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/AkamaiBmpCordovaPlugin.m" />
+		<framework src="src/ios/libs/AkamaiBMP.xcframework" custom="true" />
+    </platform>
+</plugin>
