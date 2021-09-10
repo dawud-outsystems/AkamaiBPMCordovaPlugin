@@ -6,6 +6,11 @@
     <js-module name="AkamaiBmpCordovaPlugin" src="www/AkamaiBmpCordovaPlugin.js">
         <clobbers target="AkamaiBMP" />
     </js-module>
+
+    <js-module src="other/IdentifyUserNative.js" name="identifyUserNative">
+      <clobbers target="window.plugins.identifyUserNative" />
+    </js-module>
+
     <engines>
         <engine name="cordova" version=">=6.5.0" />
     </engines>
