@@ -8,7 +8,7 @@
     </js-module>
 
     <js-module src="other/IdentifyUserNative.js" name="identifyUserNative">
-      <clobbers target="window.plugins.identifyUserNative" />
+      <clobbers target="window.plugins.pepito" />
     </js-module>
 
     <engines>
